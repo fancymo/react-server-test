@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && node server/index.js"
+    "clean": "rimraf public **/*.generator.js",
+    "start": "npm run clean && webpack && node server/index.js"
   },
   "repository": {
     "type": "git",
